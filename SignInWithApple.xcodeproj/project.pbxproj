@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9356FCA025BD1498007AC332 /* SignInWithApple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignInWithApple.entitlements; sourceTree = "<group>"; };
 		9361002A25B98CC3008ED65E /* SignInWithAppleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleApp.swift; sourceTree = "<group>"; };
 		9361002B25B98CC3008ED65E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9361002C25B98CC5008ED65E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		9361002425B98CC3008ED65E = {
 			isa = PBXGroup;
 			children = (
+				9356FCA025BD1498007AC332 /* SignInWithApple.entitlements */,
 				9361002925B98CC3008ED65E /* Shared */,
 				9361003325B98CC5008ED65E /* iOS */,
 				9361003A25B98CC5008ED65E /* macOS */,
@@ -470,6 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SignInWithApple.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5673JGTRDE;
 				ENABLE_PREVIEWS = YES;
@@ -492,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SignInWithApple.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5673JGTRDE;
 				ENABLE_PREVIEWS = YES;

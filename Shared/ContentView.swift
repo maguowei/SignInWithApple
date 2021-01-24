@@ -6,11 +6,41 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            SignInWithAppleButton(.signIn,
+                onRequest: { request in
+                    request.requestedScopes = [.fullName, .email]
+                },
+                onCompletion: { result in
+                    switch result {
+                        case .success (let authorization):
+                            if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+                                let userId = appleIDCredential.user
+                                let identityToken = appleIDCredential.identityToken
+                                let authorizationCode = appleIDCredential.authorizationCode
+                                let email = appleIDCredential.email
+                                let fullName = appleIDCredential.fullName
+                                let state = appleIDCredential.state
+                                
+                                print(userId)
+                                print(identityToken!)
+                                print(authorizationCode!)
+                                print(email ?? "")
+                                print(fullName ?? "")
+                                print(state ?? "")
+                            }
+                            
+                        case .failure (let error):
+                            print("Authorization failed: " + error.localizedDescription)
+                    }
+                }
+            ).frame(width: 300.0, height: 50.0)
+            .signInWithAppleButtonStyle(.black)
+        }
     }
 }
 
